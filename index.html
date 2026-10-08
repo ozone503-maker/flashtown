@@ -562,6 +562,7 @@
     body.view-ocean .content-page[data-page="ocean"],
     body.view-volcano .content-page[data-page="volcano"],
     body.view-lava-tubes .content-page[data-page="lava-tubes"],
+    body.view-pond .content-page[data-page="pond"],
     body.view-chickens .content-page[data-page="chickens"],
     body.view-cats .content-page[data-page="cats"],
     body.view-dogs .content-page[data-page="dogs"],
@@ -779,6 +780,7 @@
       <a href="#ocean" data-route="ocean">Ocean</a>
       <a href="#volcano" data-route="volcano">Volcano</a>
       <a href="#lava-tubes" data-route="lava-tubes">Lava tubes</a>
+      <a href="#pond" data-route="pond">Pond</a>
       <a href="#chickens" data-route="chickens">Chickens</a>
       <a href="#cats" data-route="cats">Cats</a>
       <a href="#dogs" data-route="dogs">Dogs</a>
@@ -1046,6 +1048,36 @@
       </div>
     </section>
 
+    <section class="content-page" data-page="pond" id="pond" aria-labelledby="pond-title">
+      <div class="chapter-hero portrait-media">
+        <video class="lazy-video chapter-video" autoplay muted loop playsinline preload="none" poster="assets/images/pond-hero.jpg" data-src="assets/videos/pond-hero.mp4" aria-label="A cat drinking from the edge of the FlashTown pond, koi moving under duckweed and lily pads"></video>
+        <div class="chapter-copy">
+          <h1 id="pond-title">this is my favorite shit ever.</h1>
+          <p>the water in our ponds came right off the pacific ocean in the form of clouds which backed up against an active volcano and settled on our roof.</p>
+        </div>
+        <div class="chapter-controls" data-video-controls>
+          <button class="chapter-control sound-toggle" type="button" aria-pressed="true" aria-label="Turn sound on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5Z"/><path d="m19 9-6 6M13 9l6 6"/></svg><span>Sound off</span></button>
+          <button class="chapter-control play-toggle" type="button" aria-pressed="false" aria-label="Pause video"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg><span>Pause</span></button>
+        </div>
+      </div>
+      <div class="chapter-breathe">
+        <div class="wrap chapter-breathe-inner">
+          <h2>my nervous system is a calm pond.</h2>
+          <div class="chapter-breathe-copy">
+            <p>then it finds a home in our biologically active and nutrient rich aquatic world.</p>
+            <p>then during drought season (coming soon) we rely on the ponds to keep our thirsty fruit trees plugged and well fed with electrolytes because thats what plants crave. 😬😅</p>
+            <p>the challenge with so much sun and so much oxygen is that we are always fighting algae and until I just figured out the secret science our shit was always green, so I added some more competitive type plants and let that crap on the surface cover more area to create more shade. I guess what happened was the algae got starved out but either way...</p>
+            <p>my <em>whole</em> life I would <em>have</em> hiked <em>somewhere</em> to sleep <em>next</em> to some shit like this and I can find great joy in the tiniest ecosystems this is like 1000× more than I need to be happy.</p>
+            <p>I <em>have</em> to say <em>however</em> great my life seems its actually way better ---&gt;but you really gotta be into tiny <em>communities</em> congregating around <em>submerged logs</em> being equal to an entire alien planet to understand it.🥰</p>
+          </div>
+        </div>
+      </div>
+      <div class="chapter-visual">
+        <div class="chapter-media"><img src="assets/images/pond-hero.jpg" alt="A cat drinking from the FlashTown pond at the water's edge" /></div>
+        <div class="chapter-text"><p class="micro">from the farm</p><h2>the ponds at flashtown stay crackin.</h2><p>all these cats came here as babies.</p></div>
+      </div>
+    </section>
+
     <section class="content-page" data-page="chickens" id="chickens" aria-labelledby="chickens-title">
       <div class="chapter-hero portrait-media">
         <video class="lazy-video chapter-video" autoplay muted loop playsinline preload="none" poster="assets/images/home-img-8.jpg" data-src="assets/videos/home-clip-3.mp4" aria-label="Rooster walking across black basalt at FlashTown"></video>
@@ -1232,7 +1264,7 @@
         lazyVideos.forEach(function (video) { video.src = video.dataset.src; video.load(); });
       }
 
-      var routes = ['home', 'ocean', 'volcano', 'lava-tubes', 'chickens', 'cats', 'dogs', 'regenerative'];
+      var routes = ['home', 'ocean', 'volcano', 'lava-tubes', 'pond', 'chickens', 'cats', 'dogs', 'regenerative'];
       var routeLinks = Array.prototype.slice.call(document.querySelectorAll('[data-route]'));
       function currentRoute() {
         var candidate = window.location.hash.slice(1);
